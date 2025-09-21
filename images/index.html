@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image.png" href="bday.png" />
+  <title>happy birthday cakra</title>
+  <link rel="icon" href="https://i.ibb.co.com/hXZsYxZ/heart.png">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #ffffff;
+      color: #1e3a8a;
+      font-family: 'Poppins', sans-serif;
+      overflow: hidden;
+    }
+
+    .page {
+      height: 100vh;
+      width: 100vw;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 1s ease;
+    }
+
+    .page.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .highlight {
+      color: #1e3a8a;
+      font-weight: bold;
+    }
+
+    .button {
+      background-color: #1e3a8a;
+      color: #fff;
+      border: none;
+      border-radius: 25px;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      margin-top: 30px;
+      transition: background 0.3s;
+    }
+
+    .button:hover {
+      background-color: #2c4ca5;
+    }
+
+    img {
+      max-width: 70vw;
+      max-height: 50vh;
+      margin-bottom: 20px;
+    }
+
+    .letter {
+      white-space: pre-line;
+      font-size: 1.1rem;
+      max-width: 600px;
+      text-align: left;
+      border-left: 3px solid #1e3a8a;
+      padding-left: 15px;
+      min-height: 200px;
+    }
+
+    .falling {
+      position: fixed;
+      top: -30px;
+      font-size: 24px;
+      animation: fall linear infinite;
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    .blue-heart {
+      color: #b65471;
+    }
+
+    .yellow-star {
+      color: #facc15;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(120vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      .button {
+        padding: 10px 20px;
+        font-size: 1rem;
+      }
+
+      .letter {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page active" id="page1">
+    <img src="\images\1.gif" alt="Cute Icon" />
+    <h1>Happy Birthday <span class="highlight">to my beloved one!</span></h1>
+    <p>there's moreee, klik sini di bawaah✨</p>
+    <button class="button" onclick="goToPage(2)">tap here ‹𝟹</button>
+  </div>
+
+  <div class="page" id="page2">
+    <img src="\images\2.gif" alt="Cute Icon" />
+    <p>just so u know, u get more amazing every day n every year. Happy Birthday, sayang.</p>
+    <button class="button" onclick="goToPage(3)">open it ‹𝟹</button>
+  </div>
+
+  <div class="page" id="page3">
+    <img src="\images\write.gif" alt="Envelope" />
+    <p>okay okay last one fr, aku bikin sesuatu buat kamuu! mau liat?( ∩´͈ ᐜ `͈∩)</p>
+    <button class="button" onclick="goToPage(6)">mau mauuu</button>
+    <button class="button" onclick="goToPage(4)">dih, ogah</button>
+  </div>
+
+  <div class="page" id="page4">
+    <img src="\images\rewel.gif" alt="Cute Icon" />
+    <p>LIAT ATAU GW BOM RUMAH ELU</p>
+    <button class="button" onclick="goToPage(6)">becandaa maaf ya sayang</button>
+    <button class="button" onclick="goToPage(5)">bidiimit</button>
+  </div>
+
+  <div class="page" id="page5">
+    <img src="\images\Sad Cat Sticker.gif" alt="Cute Icon" />
+    <p>pleaseeee🥺....</p>
+    <button class="button" onclick="goToPage(6)">fine ily :( </button>
+  </div>
+
+   <div class="page" id="page6">
+    <img src="\images\peluk.gif" alt="Cute Icon" />
+    <p>YEYYYYY, AKU TAU KAMU PASTI KLIK YG ATAS. Hehe, Read it slowly yaa🍰</p>
+    <button class="button" onclick="goToPage(7)">okaay </button>
+  </div>
+
+  <div class="page" id="page7">
+    <img src="\images\ehek.png" alt="Cute Icon" />
+    <h1>Kak, i hope u know, you deserve all the love in the world today and always, happy birthday, my love <span class="highlight"></span></h1>
+    <p>i love you in every definition of the word</p>
+    <button class="button" onclick="goToPage(8)">open this\^o^/</button>
+  </div>
+
+   <div class="page" id="page8">
+    <img src="\images\pelkul.png" alt="Cute Icon" />
+    <h1>for all the days that you made me feel loved and appreciated, i'm out of words to tell how grateful i am to have you <span class="highlight"></span></h1>
+    <p>finding u was like coming home to me :(</p>
+    <button class="button" onclick="goToPage(9)">ily</button>
+  </div>
+
+  <div class="page" id="page9">
+    <img src="\images\syp y.png" />
+    <h1>every year, you grow wiser, kinder, and even more amazing. Happy Birthday, my boy❤️ <span class="highlight"></span></h1>
+    <p>just you, being effortlessly my favorite view</p>
+    <button class="button" onclick="goToPage(10)">ily</button>
+  </div>
+
+  <div class="page" id="page10">
+    <img src="\images\hihi.png" alt="Cute Icon" />
+    <h1>i swear every time we spend time together, i end up liking you even more.<span class="highlight"></span></h1>
+    <p>it's your day, sayang. Scroll down, i left a little letter for you🎂</p>
+    <button class="button" onclick="goToPage(11)">ily</button>
+  </div>
+
+
+<div class="page" id="page11" style="font-family: 'Dancing Script', cursive;">
+    <h2>My Precious, Cakra rivat <𝟑 .ᐟ </h2>
+    <div class="letter" id="letterText"></div>
+</div>
+
+  <audio id="bg-music" src="\images\paruh.mp3" autoplay loop muted></audio>
+  <audio id="bg-music-page11" src="\images\canthelp (1).mp3" loop muted></audio>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script>
+    const fullLetter = `it's your special dayy, wish u all the bestt sayang. Selamat bertumbuh jauh lebih baik sayangku cintaaku, panjang umur, sehat selaluu.
+
+I hope when things sometimes do not go ur way, u won't stop trying, u will not give up on urself and on ur thoughest days,
+aku harap kamu selalu mengingatkan diri kamu kalau kamu itu deserve better, kamu layak dicintai dan dirayakan dalam hal apapun!!
+terkadang, yang bisa diandelin memang cuma diri kamu sendiri, tapi jangan pernah kamu ngerasa sendiri, if you need someone to talk, im here! and always here, kamu masih punya aku sayang!!
+
+Semoga hal-hal baik selalu beriringan denganmu, semoga semesta selalu berpihak sama kamu, semoga jalanmu selalu di mudahkan, terus tumbuh & bahagia. Aku selalu bangga atas setiap proses yang sudah kamu lalui & kamu capaii anak hebat anak kuat anak gantengg. 
+
+u're worth everything. u're worth appreciating. u're worth finding. u're worth loving.
+you mean everything to me.
+
+with all my love,
+𝜗𝜚 yours forever, D`;
+
+    function goToPage(pageNum) {
+    const pages = document.querySelectorAll('.page');
+    pages.forEach(p => p.classList.remove('active'));
+    const next = document.getElementById(`page${pageNum}`);
+    next.classList.add('active');
+
+    const music1 = document.getElementById("bg-music");
+    const music2 = document.getElementById("bg-music-page11");
+
+    // Stop and mute all music first
+    music1.muted = true;
+    music2.muted = true;
+    music1.pause();
+    music2.pause();
+
+    if ([7, 8, 9, 10].includes(pageNum)) {
+        music1.muted = false;
+        music1.play().catch(e => console.log("Autoplay blocked:", e));
+    } else if (pageNum === 11) {
+        music2.muted = false;
+        music2.play().catch(e => console.log("Autoplay blocked:", e));
+        confetti({ particleCount: 150, spread: 100, origin: { y: 0.6 } });
+        typeText(fullLetter, document.getElementById('letterText'), 25);
+        startFallingSymbols();
+    }
+}
+    function typeText(text, element, speed) {
+      element.innerHTML = '';
+      let i = 0;
+      function type() {
+        if (i < text.length) {
+          element.innerHTML += text.charAt(i);
+          i++;
+          setTimeout(type, speed);
+        }
+      }
+      type();
+    }
+
+    function startFallingSymbols() {
+      setInterval(() => {
+        const el = document.createElement('div');
+        el.classList.add('falling');
+        const isHeart = Math.random() < 0.5;
+        el.innerText = isHeart ? '💙' : '⭐';
+        el.classList.add(isHeart ? 'blue-heart' : 'yellow-star');
+        el.style.left = Math.random() * 100 + 'vw';
+        el.style.animationDuration = (5 + Math.random() * 2) + 's';
+        document.body.appendChild(el);
+        setTimeout(() => el.remove(), 6000);
+      }, 300);
+    }
+  </script>
+</body>
+</html>
